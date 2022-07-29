@@ -1,0 +1,54 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-navbar class="navbar">
+      
+      <button ion-button icon-only class="bouton">
+        <ion-icon name="menu"></ion-icon>
+      </button>
+      <ion-title class="liste">
+        Portal Job
+      </ion-title>
+      
+
+    </ion-navbar>    
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  
+  <ion-header collapse="condense">    
+    <ion-toolbar>
+      <ion-navbar>
+        <ion-title size="large" >Portal Job</ion-title>
+        
+      </ion-navbar>
+           
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-navbar>
+    <ion-title class="titre">
+      LISTES D'EMPLOIES
+    </ion-title>
+
+  </ion-navbar>
+  <ion-card *ngFor="let job of Jobs">   
+    <ion-card-header>      
+      <ion-card-subtitle id="title" >{{ job.title }}</ion-card-subtitle>     
+      
+    </ion-card-header>
+    <ion-card-content>
+      <ion-card-title id="content">{{job.company}}</ion-card-title>
+    </ion-card-content>
+      <ion-card-content >
+          <p>{{job.contrat}}</p>
+          <p>{{job.description}}</p>
+          <a href="https://www.portaljob-madagascar.com/emploi/liste">{{job.details}}</a>
+      </ion-card-content>
+
+    
+  </ion-card> 
+      
+
+  
+</ion-content>
